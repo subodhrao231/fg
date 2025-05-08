@@ -1,57 +1,83 @@
-// Sample movie data
-const movies = [
+// Sample data - in real app, this would come from API
+const trendingMovies = [
     {
         id: 1,
         title: "Avengers: Endgame",
-        thumbnail: "images/movies/avengers.jpg",
-        category: "action"
+        thumbnail: "assets/movies/avengers.jpg",
+        year: 2019,
+        quality: "4K"
     },
     {
         id: 2,
         title: "The Dark Knight",
-        thumbnail: "images/movies/dark-knight.jpg",
-        category: "action"
+        thumbnail: "assets/movies/dark-knight.jpg",
+        year: 2008,
+        quality: "HD"
     },
     {
         id: 3,
         title: "Inception",
-        thumbnail: "images/movies/inception.jpg",
-        category: "sci-fi"
+        thumbnail: "assets/movies/inception.jpg",
+        year: 2010,
+        quality: "HD"
     },
     {
         id: 4,
-        title: "The Shawshank Redemption",
-        thumbnail: "images/movies/shawshank.jpg",
-        category: "drama"
-    },
-    {
-        id: 5,
-        title: "Pulp Fiction",
-        thumbnail: "images/movies/pulp-fiction.jpg",
-        category: "drama"
-    },
-    {
-        id: 6,
-        title: "The Godfather",
-        thumbnail: "images/movies/godfather.jpg",
-        category: "drama"
+        title: "Interstellar",
+        thumbnail: "assets/movies/interstellar.jpg",
+        year: 2014,
+        quality: "4K"
     }
 ];
 
-// Load featured movies
+const latestPosts = [
+    {
+        id: 1,
+        title: "Top 10 Movies to Watch This Weekend",
+        thumbnail: "assets/blog/weekend-movies.jpg",
+        date: "May 15, 2023"
+    },
+    {
+        id: 2,
+        title: "New Streaming Releases for May 2023",
+        thumbnail: "assets/blog/may-releases.jpg",
+        date: "May 10, 2023"
+    }
+];
+
+// Load trending movies
 document.addEventListener('DOMContentLoaded', () => {
-    const featuredMoviesContainer = document.getElementById('featuredMovies');
+    const trendingContainer = document.getElementById('trendingMovies');
+    const postsContainer = document.getElementById('latestPosts');
     
-    movies.forEach(movie => {
-        const movieCard = document.createElement('div');
-        movieCard.className = 'movie-card';
-        movieCard.innerHTML = `
-            <img src="${movie.thumbnail}" alt="${movie.title}">
-            <div class="movie-info">
-                <h3>${movie.title}</h3>
-                <span class="category">${movie.category}</span>
+    // Load movies
+    trendingMovies.forEach(movie => {
+        trendingContainer.innerHTML += `
+            <div class="movie-card">
+                <a href="watch.html?id=${movie.id}">
+                    <img src="${movie.thumbnail}" alt="${movie.title}">
+                    <div class="movie-info">
+                        <h3>${movie.title}</h3>
+                        <div class="meta">
+                            <span>${movie.year}</span>
+                            <span>${movie.quality}</span>
+                        </div>
+                    </div>
+                </a>
             </div>
         `;
-        featuredMoviesContainer.appendChild(movieCard);
     });
-});
+    
+    // Load blog posts
+    latestPosts.forEach(post => {
+        postsContainer.innerHTML += `
+            <div class="post-card">
+                <a href="post.html?id=${post.id}">
+                    <img src="${post.thumbnail}" alt="${post.title}">
+                    <div class="post-info">
+                        <h3>${post.title}</h3>
+                        <div class="meta">
+                            <span>${post.date}</span>
+                        </div>
+                    </div>
+               

@@ -3,41 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MovieFlix - Upload and Watch Movies</title>
+    <title>StreamFlix - HDHub4u Clone</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <header>
         <nav>
-            <div class="logo">MovieFlix</div>
+            <div class="logo">StreamFlix</div>
+            <div class="search-box">
+                <input type="text" placeholder="Search movies...">
+                <button>Search</button>
+            </div>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="movies.html">Movies</a></li>
-                <li><a href="upload.html">Upload</a></li>
-                <li><a href="login.html">Login</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="#" id="loginBtn">Login</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
         <section class="hero">
-            <h1>Watch and Share Your Favorite Movies</h1>
-            <p>Upload, stream, and discover thousands of movies</p>
-            <a href="upload.html" class="btn">Upload Movie</a>
+            <h1>Watch Latest Movies in HD Quality</h1>
+            <p>Stream or download your favorite movies and TV shows</p>
+            <div class="cta-buttons">
+                <a href="movies.html" class="btn">Browse Movies</a>
+                <a href="blog.html" class="btn secondary">Read Blog</a>
+            </div>
         </section>
 
-        <section class="featured-movies">
-            <h2>Featured Movies</h2>
-            <div class="movie-grid" id="featuredMovies">
-                <!-- Movies will be loaded here via JavaScript -->
+        <section class="trending">
+            <h2>Trending Now</h2>
+            <div class="movies-grid" id="trendingMovies">
+                <!-- Filled by JavaScript -->
+            </div>
+        </section>
+
+        <section class="latest-posts">
+            <h2>Latest Blog Posts</h2>
+            <div class="posts-grid" id="latestPosts">
+                <!-- Filled by JavaScript -->
             </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2023 MovieFlix. All rights reserved.</p>
+        <p>&copy; 2023 StreamFlix. All content is for demo purposes only.</p>
     </footer>
 
-    <script src="js/script.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>

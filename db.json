@@ -1,0 +1,35 @@
+{
+  "movies": [
+    {
+      "id": 1,
+      "title": "Avengers: Endgame",
+      "description": "After the devastating events of Avengers: Infinity War, the universe is in ruins.",
+      "year": 2019,
+      "genre": ["Action", "Adventure", "Sci-Fi"],
+      "thumbnail": "assets/movies/avengers.jpg",
+      "videoUrl": "https://example.com/stream/avengers",
+      "quality": "4K",
+      "downloadLinks": [
+        {
+          "quality": "4K",
+          "url": "https://example.com/download/avengers-4k"
+        },
+        {
+          "quality": "HD",
+          "url": "https://example.com/download/avengers-hd"
+        }
+      ]
+    }
+  ],
+  "blogPosts": [
+    {
+      "id": 1,
+      "title": "Top 10 Movies to Watch This Weekend",
+      "content": "Here are our picks for the best movies to watch...",
+      "author": "Admin",
+      "categories": ["Recommendations"],
+      "featuredImage": "assets/blog/weekend-movies.jpg",
+      "date": "2023-05-15"
+    }
+  ]
+}

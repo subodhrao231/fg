@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Movie - MovieFlix</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">MovieFlix</div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="movies.html">Movies</a></li>
+                <li><a href="upload.html">Upload</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="upload-container">
+        <h1>Upload Your Movie</h1>
+        <form id="uploadForm">
+            <div class="form-group">
+                <label for="movieTitle">Movie Title</label>
+                <input type="text" id="movieTitle" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="movieDescription">Description</label>
+                <textarea id="movieDescription" rows="4" required></textarea>
+            </div>
+            
+            <div class="form-group">
+                <label for="movieCategory">Category</label>
+                <select id="movieCategory" required>
+                    <option value="">Select a category</option>
+                    <option value="action">Action</option>
+                    <option value="comedy">Comedy</option>
+                    <option value="drama">Drama</option>
+                    <option value="horror">Horror</option>
+                    <option value="sci-fi">Sci-Fi</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="movieThumbnail">Thumbnail Image</label>
+                <input type="file" id="movieThumbnail" accept="image/*" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="movieFile">Movie File</label>
+                <input type="file" id="movieFile" accept="video/*" required>
+            </div>
+            
+            <button type="submit" class="btn">Upload Movie</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 MovieFlix. All rights reserved.</p>
+    </footer>
+
+    <script src="js/upload.js"></script>
+</body>
+</html>
